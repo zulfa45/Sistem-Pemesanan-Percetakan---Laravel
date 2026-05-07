@@ -5,150 +5,161 @@
 ![Alpine.js](https://img.shields.io/badge/Alpine.js-3.x-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-**Spektrum Multi Grafika** adalah sistem informasi pemesanan percetakan digital berbasis web yang modern dan responsif. Sistem ini dirancang untuk mempermudah pelanggan melakukan pemesanan dari mana saja tanpa perlu membuat akun (*Guest Checkout*), serta membantu staf operasional (Kasir) dan pemilik (Admin) dalam mengelola antrean, file desain, dan laporan transaksi secara efisien.
+🖨️ Spektrum Multi Grafika - Web Printing System
+Spektrum Multi Grafika adalah sistem informasi pemesanan percetakan digital berbasis web yang modern dan responsif. Sistem ini dirancang untuk mempermudah pelanggan melakukan pemesanan dari mana saja tanpa perlu membuat akun (Guest Checkout), serta membantu staf operasional (Kasir) dan pemilik (Admin) dalam mengelola antrean, file desain, dan laporan transaksi secara efisien.
 
----
+🎯 Tujuan Sistem
+Mempermudah pemesanan jasa cetak melalui sistem multi-step form online maupun pesanan walk-in (langsung).
 
-## 🎯 Tujuan Sistem
-1. Mempermudah pemesanan jasa cetak melalui sistem *multi-step form* online maupun pesanan *walk-in* (langsung).
-2. Mempermudah pelanggan dalam mengirimkan instruksi, berkas desain, dan verifikasi pembayaran.
-3. Menyediakan dasbor pengelolaan operasional yang *real-time* dan efisien bagi Kasir dan Admin.
+Mempermudah pelanggan dalam mengirimkan instruksi, berkas desain, dan verifikasi pembayaran.
 
----
+Menyediakan dasbor pengelolaan operasional yang real-time dan efisien bagi Kasir dan Admin.
 
-## ✨ Fitur Unggulan
-
-### 🛒 1. Modul Pelanggan (Public Interface)
+✨ Fitur Unggulan
+🛒 1. Modul Pelanggan (Public Interface)
 Fitur yang dapat diakses oleh pengguna umum untuk melakukan pemesanan secara mandiri.
-- **Guest Checkout (Tanpa Login):** Mempercepat alur konversi pesanan.
-- **Katalog Layanan Digital:** Menampilkan daftar jasa percetakan, harga, dan deskripsi.
-- **Multi-Step Order (Formulir Berurutan):**
-  - **Tahap 1:** Input identitas (Nama, WA, Alamat), pemilihan layanan, dan Catatan.
-  - **Tahap 2:** Wajib unggah foto KTP (Verifikasi) & file desain (opsional untuk jasa tertentu).
-  - **Tahap 3:** Konfirmasi Harga Total & Pembayaran.
-- **Struk Digital & Thermal Print:** Generasi struk dengan nomor resi unik yang dioptimalkan untuk *printer thermal* (80mm) sebagai bukti pengambilan barang.
 
-### 🧑‍💻 2. Modul Operasional Kasir (Staff Interface)
+Guest Checkout (Tanpa Login): Mempercepat alur konversi pesanan.
+
+Katalog Layanan Digital: Menampilkan daftar jasa percetakan, harga, dan deskripsi.
+
+Multi-Step Order (Formulir Berurutan):
+
+Tahap 1: Input identitas (Nama, WA, Alamat), pemilihan layanan, dan Catatan.
+
+Tahap 2: Wajib unggah foto KTP (Verifikasi) & file desain (opsional untuk jasa tertentu).
+
+Tahap 3: Konfirmasi Harga Total & Pembayaran.
+
+Struk Digital & Thermal Print: Generasi struk dengan nomor resi unik yang dioptimalkan untuk printer thermal (80mm) sebagai bukti pengambilan barang.
+
+🧑‍💻 2. Modul Operasional Kasir (Staff Interface)
 Fitur khusus untuk staf toko dalam mengelola antrean dan pesanan.
-- **Dashboard Monitoring Real-Time:** Ringkasan statistik (Total Antrean, Pesanan Pending, Selesai).
-- **Manajemen Status Produksi:** Ubah status pesanan (Pending ➔ Diproses ➔ Selesai) cukup dengan *dropdown*.
-- **Pusat Detail Pesanan (Modal View):** Tampilan *pop-up* (menggunakan Alpine.js) untuk melihat detail transaksi, instruksi khusus, verifikasi KTP, cek bukti transfer, dan tombol *download* file desain langsung dalam satu layar.
 
-### 👑 3. Modul Administrasi & Manajemen (Admin Interface)
+Dashboard Monitoring Real-Time: Ringkasan statistik (Total Antrean, Pesanan Pending, Selesai).
+
+Manajemen Status Produksi: Ubah status pesanan (Pending ➔ Diproses ➔ Selesai) cukup dengan dropdown.
+
+Pusat Detail Pesanan (Modal View): Tampilan pop-up (menggunakan Alpine.js) untuk melihat detail transaksi, instruksi khusus, verifikasi KTP, cek bukti transfer, dan tombol download file desain langsung dalam satu layar.
+
+👑 3. Modul Administrasi & Manajemen (Admin Interface)
 Fitur untuk pemilik atau administrator sistem.
-- **Laporan Transaksi:** Memantau pendapatan dan total pesanan yang masuk ke sistem.
-- **Manajemen Layanan (CRUD Service):** Menambah, mengubah, atau menghapus jenis jasa, satuan (Pcs, Meter, Lembar), dan harga.
-- **Kendali Sistem:** Hak akses penuh untuk menghapus data pesanan/transaksi yang tidak valid.
 
----
+Laporan Transaksi: Memantau pendapatan dan total pesanan yang masuk ke sistem.
 
-## 🛠️ Teknologi yang Digunakan (Tech Stack)
+Manajemen Layanan (CRUD Service): Menambah, mengubah, atau menghapus jenis jasa, satuan (Pcs, Meter, Lembar), dan harga.
 
+Kendali Sistem: Hak akses penuh untuk menghapus data pesanan/transaksi yang tidak valid.
+
+🛠️ Teknologi yang Digunakan (Tech Stack)
 Sistem ini dibangun menggunakan arsitektur MVC (Model-View-Controller) dengan teknologi:
-- **Framework Backend:** Laravel 11 (PHP)
-- **Frontend & UI/UX:** Tailwind CSS & Alpine.js (Blade Templating)
-- **Database:** MySQL / SQLite
-- **File Storage:** Local Public Storage (Symlink) untuk pengamanan berkas KTP dan Desain.
 
----
+Framework Backend: Laravel 11 (PHP)
 
-## 🚀 Panduan Instalasi & Menjalankan Proyek
+Frontend & UI/UX: Tailwind CSS & Alpine.js (Blade Templating)
 
+Database: MySQL / SQLite
+
+File Storage: Local Public Storage (Symlink) untuk pengamanan berkas KTP dan Desain.
+
+🚀 Panduan Instalasi & Menjalankan Proyek
 Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal Anda:
 
-### 1. Prasyarat Sistem
-- PHP >= 8.2
-- Composer
-- Node.js & NPM
-- XAMPP / Laragon (Untuk server MySQL lokal)
+1. Prasyarat Sistem
+PHP >= 8.2
 
-### 2. Langkah Instalasi
+Composer
 
-**Clone Repositori:**
-```bash
-git clone https://github.com/USERNAME_ANDA/spektrum-multi-grafika.git
-cd spektrum-multi-grafika
+Node.js & NPM
 
+XAMPP / Laragon (Untuk server MySQL lokal)
 
-**Install Dependencies (Backend & Frontend):**
+2. Langkah Instalasi
+Clone Repositori:
+
+git clone https://github.com/zulfa45/Sistem-Pemesanan-Percetakan---Laravel.git
+
+cd Sistem-Pemesanan-Percetakan---Laravel
+
+Install Dependencies (Backend & Frontend):
+
 composer install
+
 npm install
 
+Pengaturan Environment (.env):
 
-**Pengaturan Environment (.env):**
-1. Salin file `.env.example` dan ubah namanya menjadi `.env`.
-2. Buka file `.env` dan atur koneksi database Anda:
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=nama_database_anda
-DB_USERNAME=root
-DB_PASSWORD=
+Salin file .env.example dan ubah namanya menjadi .env.
 
-3. Generate Application Key:
+Buka file .env dan atur koneksi database Anda (DB_DATABASE, DB_USERNAME, dll).
+
+Generate Application Key:
+
 php artisan key:generate
 
+Migrasi Database:
 
-**Migrasi Database:**
 php artisan migrate:fresh
 
-
-**Tautkan Folder Penyimpanan (Sangat Penting!):**
+Tautkan Folder Penyimpanan (Sangat Penting!):
 Perintah ini wajib dijalankan agar file desain, KTP, dan bukti pembayaran pelanggan dapat diakses oleh sistem.
+
 php artisan storage:link
 
+Build Aset Frontend:
+Jalankan perintah ini untuk merender Tailwind CSS.
 
-**Build Aset Frontend:**
-Jalankan perintah ini untuk merender Tailwind CSS (Gunakan `npm run dev` jika sedang tahap pengembangan/modifikasi desain).
 npm run build
 
+Jalankan Server Lokal Laravel:
 
-**Jalankan Server Lokal Laravel:**
 php artisan serve
 
-Aplikasi sekarang bisa diakses di browser pada: **`http://127.0.0.1:8000`**
+Aplikasi sekarang bisa diakses di browser pada: http://127.0.0.1:8000
 
----
-
-## 🔐 Akses Akun Default (Testing)
-
-Jika database masih kosong setelah migrasi, buka terminal Anda, ketik `php artisan tinker`, lalu paste kode berikut untuk membuat akun bawaan:
+🔐 Akses Akun Default (Testing)
+Jika database masih kosong setelah migrasi, buka terminal Anda, ketik php artisan tinker, lalu paste kode berikut secara berurutan untuk membuat akun bawaan:
 
 App\Models\User::create(['name' => 'Admin Spektrum', 'email' => 'admin@admin', 'password' => bcrypt('11223344'), 'role' => 'admin']);
+
 App\Models\User::create(['name' => 'Kasir Spektrum', 'email' => 'kasir@admin', 'password' => bcrypt('11223344'), 'role' => 'kasir']);
 
+📖 Panduan Penggunaan (Tutorial Aplikasi)
+Untuk menguji alur sistem (Testing Flow), ikuti langkah-langkah berikut:
 
----
+Tahap 1: Setup Awal (Sebagai Admin)
+Buka http://127.0.0.1:8000/login.
 
-## 📖 Panduan Penggunaan (Tutorial Aplikasi)
+Login menggunakan Email: admin@admin | Password: 11223344.
 
-Untuk menguji alur sistem (*Testing Flow*), ikuti langkah-langkah berikut:
+Masuk ke menu "Kelola Jasa" di navigasi atas.
 
-### Tahap 1: Setup Awal (Sebagai Admin)
-1. Buka `http://127.0.0.1:8000/login`.
-2. Login menggunakan **Email:** `admin@admin` | **Password:** `11223344`.
-3. Masuk ke menu **"Kelola Jasa"** di navigasi atas.
-4. Tambahkan minimal 1 jenis jasa cetak (Contoh: "Cetak Spanduk Banner", Satuan: "Meter", Harga: 25000).
-5. Logout dari akun Admin.
+Tambahkan minimal 1 jenis jasa cetak (Contoh: "Cetak Spanduk Banner", Satuan: "Meter", Harga: 25000).
 
-### Tahap 2: Simulasi Pemesanan (Sebagai Pelanggan Publik)
-1. Buka halaman utama web di `http://127.0.0.1:8000`.
-2. Klik tombol **"Pesan Sekarang"**. Anda tidak perlu login.
-3. Isi data diri, unggah foto KTP, pilih Jasa Cetak, masukkan jumlah pesanan, dan unggah file Desain Anda.
-4. Klik **"Lanjut ke Pembayaran"**.
-5. Sistem akan menampilkan total harga secara otomatis. Silakan pilih bank dan unggah gambar Bukti Transfer sembarang untuk simulasi.
-6. Klik konfirmasi, dan Anda akan mendapatkan **Struk Digital** dengan Nomor Resi (contoh: SPK-ABCD123).
+Logout dari akun Admin.
 
-### Tahap 3: Simulasi Penerimaan Order (Sebagai Kasir)
-1. Buka kembali halaman `http://127.0.0.1:8000/login`.
-2. Login menggunakan **Email:** `kasir@admin` | **Password:** `11223344`.
-3. Di Dashboard Kasir, pesanan yang baru saja dibuat oleh pelanggan akan muncul dalam tabel antrean.
-4. Klik tombol hitam **"Lihat Detail Lengkap"**.
-5. *Pop-up Modal* akan terbuka menampilkan detail pesanan, foto KTP, gambar bukti bayar, dan tombol untuk mendownload file desain pelanggan.
-6. Pada kolom aksi di tabel, ubah status pesanan dari "Tertunda (Pending)" menjadi "Kerjakan (Proses)", lalu "Selesai Cetak".
+Tahap 2: Simulasi Pemesanan (Sebagai Pelanggan Publik)
+Buka halaman utama web di http://127.0.0.1:8000.
 
-### Tahap 4: Cek Laporan Keuangan (Sebagai Admin)
-1. Logout dari akun Kasir, lalu Login kembali sebagai Admin.
-2. Di Dashboard Admin, lihat bagian atas. Kartu Statistik **"Total Pendapatan"** akan otomatis bertambah sesuai dengan nilai pesanan yang statusnya sudah diselesaikan oleh Kasir tadi.
+Klik tombol "Pesan Sekarang". Anda tidak perlu login.
 
----
+Isi data diri, unggah foto KTP, pilih Jasa Cetak, masukkan jumlah pesanan, dan unggah file Desain Anda.
+
+Klik "Lanjut ke Pembayaran".
+
+Sistem akan menampilkan total harga secara otomatis. Silakan pilih bank dan unggah gambar Bukti Transfer sembarang untuk simulasi.
+
+Klik konfirmasi, dan Anda akan mendapatkan Struk Digital dengan Nomor Resi (contoh: SPK-ABCD123).
+
+Tahap 3: Simulasi Penerimaan Order (Sebagai Kasir)
+Buka kembali halaman http://127.0.0.1:8000/login.
+
+Login menggunakan Email: kasir@admin | Password: 11223344.
+
+Di Dashboard Kasir, pesanan yang baru saja dibuat oleh pelanggan akan muncul dalam tabel antrean.
+
+Klik tombol hitam "Lihat Detail Lengkap".
+
+Pop-up Modal akan terbuka menampilkan detail pesanan, foto KTP, gambar bukti bayar, dan tombol untuk mendownload file desain pelanggan.
+
+Pada kolom aksi di tabel, ubah status pesanan dari "Tertunda (Pending)" menjadi "Kerjakan (Proses)", lalu "Selesai Cetak".
